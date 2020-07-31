@@ -4,14 +4,13 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use Core\stringStr;
-use Core\calculator;
+use App\CalculatorComp\Calculator;
 
 class CalculatorTest extends TestCase
 {
     function testCalc(): void
     {
-        $calc = new calculator();
+        $calc = new Calculator();
 
         $this->assertIsInt(
             $calc->sum(2, 2)
@@ -23,12 +22,12 @@ class CalculatorTest extends TestCase
         );
 
         $this->assertIsFloat(
-            $calc->del(5, 2)
+            $calc->div(5, 2)
         );
 
         $this->assertEquals(
             2.5,
-            $calc->del(5, 2)
+            $calc->div(5, 2)
         );
 
         $this->assertIsInt(
