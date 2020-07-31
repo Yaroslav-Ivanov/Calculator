@@ -4,15 +4,21 @@
       "App\\": "src/"
     }
   },
+  "require": {
+    "texlab/mydb": "^0.0.4",
+    "texlab/html": "^0.03.0"
+  },
   "require-dev": {
     "vimeo/psalm": "^3.12",
     "phpstan/phpstan": "^0.12.33",
-    "squizlabs/php_codesniffer": "3.*"
+    "squizlabs/php_codesniffer": "3.*",
+    "phpunit/phpunit": "^9.2"
   },
   "scripts": {
     "psalm": "psalm",
     "phpstan": "phpstan analyse -c phpstan.neon",
     "codestyle": "phpcs",
-    "codestylefix": "phpcbf"
+    "codestylefix": "phpcbf",
+    "test": "phpunit --testsuite alltests"
   }
 }
