@@ -12,7 +12,7 @@ class CalculatorTest extends TestCase
     {
         $calc = new Calculator();
 
-        $this->assertIsInt(
+        $this->assertIsFloat(
             $calc->sum(2, 2)
         );
 
@@ -30,7 +30,7 @@ class CalculatorTest extends TestCase
             $calc->div(5, 2)
         );
 
-        $this->assertIsInt(
+        $this->assertIsFloat(
             $calc->dif(4, 2)
         );
 
@@ -39,7 +39,7 @@ class CalculatorTest extends TestCase
             $calc->dif(4, 2)
         );
 
-        $this->assertIsInt(
+        $this->assertIsFloat(
             $calc->mul(2, 2)
         );
 
