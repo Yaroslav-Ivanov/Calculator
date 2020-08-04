@@ -4,32 +4,32 @@ namespace App\CalculatorComp;
 
 class Calculator implements CalculatorInterface
 {
-    private $a;
-    private $b;
+    private float $a;
+    private float $b;
 
-    public function __construct($a = 0, $b = 0)
+    public function __construct(float $a = 0, float $b = 0)
     {
         $this->a = $a;
         $this->b = $b;
     }
 
-    public function sum()
+    public function sum(float $a, float $b): float
     {
-        return $this->a + $this->b;
+        return $a + $b;
     }
 
-    public function mul()
+    public function mul(float $a, float $b): float
     {
-        return $this->a * $this->b;
+        return $a * $b;
     }
 
-    public function dif()
+    public function dif(float $a, float $b): float
     {
-        return $this->a - $this->b;
+        return $a - $b;
     }
 
-    public function div()
+    public function div(float $a, float $b): float
     {
-        return $this->a / $this->b;
+        return $a / $b;
     }
 }
